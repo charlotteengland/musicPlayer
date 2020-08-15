@@ -12,7 +12,7 @@ export const songsList = [{
     "time": "02:26",
     "title": "Clandestino",
     "artist": "Manu Chao",
-    "img": "../../music/kong.jpeg"
+    "img": "../../music/clandestino.jpeg"
   },
   {
     "id": "3",

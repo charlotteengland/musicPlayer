@@ -13,7 +13,7 @@ const Playlist = (_ => {
 
   // cache the DOM
   const playlistEl = document.querySelector(".playlist");
-  let thumbnailEl = document.querySelector("img").src;
+  let thumbnailEl = document.querySelector(".player__img");
   
 
   const init = _ => {
@@ -38,7 +38,8 @@ const Playlist = (_ => {
   }
 
   const changePic = _ => {
-    let img = songs[currentlyPlayingIndex].img;
+    let image = songs[currentlyPlayingIndex].img;
+    thumbnailEl.src = image;
 
   }
 
@@ -126,7 +127,6 @@ const Playlist = (_ => {
     })
 
     playlistEl.innerHTML = markup;
-    thumbnailEl = img;
 
   }
 
