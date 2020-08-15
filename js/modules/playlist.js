@@ -13,7 +13,8 @@ const Playlist = (_ => {
 
   // cache the DOM
   const playlistEl = document.querySelector(".playlist");
-  const thumbnailEl = document.querySelector("img").src;
+  let thumbnailEl = document.querySelector("img").src;
+  
 
   const init = _ => {
     render();
@@ -35,9 +36,12 @@ const Playlist = (_ => {
   const togglePlayPause = _ => {
     return currentSong.paused ? currentSong.play() : currentSong.pause();
   }
+
   const changePic = _ => {
-    thumbnailEl.innerHTML = songs[currentlyPlayingIndex].img;
+    let img = songs[currentlyPlayingIndex].img;
+
   }
+
 
   const mainPlay = clickedIndex => {
     if (currentlyPlayingIndex === clickedIndex) {
@@ -102,6 +106,8 @@ const Playlist = (_ => {
       }
     }
 
+    
+
     songs.forEach((songObj, index) => {
       markup += `
       <li class="playlist__song ${index === currentlyPlayingIndex ? 'playlist__song--active' : ''}">
@@ -120,6 +126,7 @@ const Playlist = (_ => {
     })
 
     playlistEl.innerHTML = markup;
+    thumbnailEl = img;
 
   }
 

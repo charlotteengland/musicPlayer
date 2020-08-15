@@ -4,13 +4,15 @@ const PlayInfo = (_ => {
  
   const state = {
     songsLength: 0,
-    isPlaying: false
+    isPlaying: false,
   }
 
   // CACHE THE DOM
 
   const playerCountEl = document.querySelector(".player__count");
   const playerTriggerEl = document.querySelector(".player__trigger");
+
+
 
   const init = _ => {
     render();
@@ -28,8 +30,6 @@ const PlayInfo = (_ => {
 
     })
   }
-
-
 
   const setState =  obj => {
     state.songsLength = obj.songsLength;

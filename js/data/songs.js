@@ -4,7 +4,7 @@ export const songsList = [{
     "time": "04:06",
     "title": "Kong",
     "artist": "Bonobo",
-    "img": "../../music/kong.jpg"
+    "img": "../../music/kong.jpeg"
   },
   {
     "id": "2",
@@ -12,7 +12,7 @@ export const songsList = [{
     "time": "02:26",
     "title": "Clandestino",
     "artist": "Manu Chao",
-    "img": "../../music/kong.jpg"
+    "img": "../../music/kong.jpeg"
   },
   {
     "id": "3",
