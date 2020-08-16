@@ -6,12 +6,11 @@ const TrackBar = (_ => {
     fillWidth: 0
   }
 
-
-// cache DOM
-  const trackBarFillEl = document.querySelector(".track-bar__fill")
+  // cache DOM
+  const trackBarFillEl = document.querySelector(".track-bar__fill");
 
   const init = _ => {
-  render();
+    render();
   }
 
   const render = _ => {
@@ -22,22 +21,17 @@ const TrackBar = (_ => {
     return (current/full) * 100;
   }
 
-
-  const setState =  obj => {
+  const setState = obj => {
     state.currentTrackTime = obj.currentTime;
     state.fullTrackTime = obj.duration;
     state.fillWidth = getPercent(state.currentTrackTime, state.fullTrackTime);
-    render();  //% of current tracktime / fulltracktime
+    render();
   }
 
   return {
     init,
     setState
   }
-
-
 })();
-
-
 
 export default TrackBar;

@@ -1,6 +1,6 @@
 import {songsList} from '../data/songs.js';
 import PlayInfo from './play-info.js';
-import TrackBar from './track-bar.js'
+import TrackBar from './track-bar.js';
 
 const Playlist = (_ => {
   //state
@@ -9,7 +9,6 @@ const Playlist = (_ => {
   let currentSong = new Audio(songs[currentlyPlayingIndex].url);
   //let isPlaying = false;
 
-    currentSong.currentTime = 240;
 
   // cache the DOM
   const playlistEl = document.querySelector(".playlist");
@@ -127,6 +126,9 @@ const Playlist = (_ => {
     })
 
     playlistEl.innerHTML = markup;
+    let image = songs[currentlyPlayingIndex].img;
+    thumbnailEl.src = image;
+
 
   }
 
